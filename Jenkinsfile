@@ -1,22 +1,22 @@
 pipeline {
   agent any
   stages{
-    stages ('Test') {
+    stage ('Test') {
       steps{
         sh 'echo "Running test stage..."'
       }
     }
-    stages ('Build') {
+    stage ('Build') {
       steps{
         sh 'echo "Building Application..."'
       }
     }
-    stages ('Docker') {
+    stage ('Docker') {
       steps{
         sh 'echo "Building image and pushing to Docker Hub..."'
       }
     }
-    stages ('Deploy') {
+    stage ('Deploy') {
       steps{
         sh 'echo "Deploying application to EC2 Instance..."'
       }
